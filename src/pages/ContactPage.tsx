@@ -209,7 +209,7 @@ const ContactPage: React.FC = () => {
                       >
                         <option value="">Selecciona un asunto</option>
                         <option value="consulta">Consulta general</option>
-                        <option value="cotizacion">Cotización de servicios</n>
+                        <option value="cotizacion">Cotización de servicios</option>
                         <option value="soporte">Soporte técnico</option>
                         <option value="trabajo">Oportunidad laboral</option>
                         <option value="otro">Otro</option>
