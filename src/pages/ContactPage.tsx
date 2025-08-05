@@ -325,7 +325,7 @@ const ContactPage: React.FC = () => {
                       { name: 'Instagram', url: 'https://instagram.com/webix', icon: 'FaInstagram' },
                       { name: 'LinkedIn', url: 'https://linkedin.com/company/webix', icon: 'FaLinkedin' },
                       { name: 'Twitter', url: 'https://twitter.com/webix', icon: 'FaTwitter' }
-                    ].map((social, index) => (
+                    ].map((social, _index) => (
                       <a 
                         key={social.name}
                         href={social.url} 
