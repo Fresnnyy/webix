@@ -11,43 +11,73 @@
   }
 
   body {
-    background-color: theme('colors.white');
-    color: theme('colors.gray.900');
+    background-color: #ffffff;
+    color: #111827; /* equivalente a text-gray-900 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold leading-tight text-dark;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #002A55; /* tu color dark */
   }
 
-  h1 { @apply text-4xl md:text-5xl; }
-  h2 { @apply text-3xl md:text-4xl; }
-  h3 { @apply text-2xl md:text-3xl; }
-  h4 { @apply text-xl md:text-2xl; }
+  h1 { font-size: 2.25rem; } /* 4xl */
+  h2 { font-size: 1.875rem; } /* 3xl */
+  h3 { font-size: 1.5rem; } /* 2xl */
+  h4 { font-size: 1.25rem; } /* xl */
 
   p {
-    @apply text-gray-700 leading-relaxed;
+    color: #374151; /* text-gray-700 */
+    line-height: 1.625;
   }
 
   .container {
-    @apply px-4 md:px-6 lg:px-8 mx-auto w-full max-w-7xl;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 80rem; /* max-w-7xl */
   }
 
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    outline: none;
   }
 
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary/50;
+    background-color: #AF4D98;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #973e84;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary/50;
+    background-color: #FF7B00;
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background-color: #e66e00;
   }
 
   .btn-accent {
-    @apply bg-accent text-dark hover:bg-accent/90 focus:ring-accent/50;
+    background-color: #FFE900;
+    color: #002A55;
+  }
+
+  .btn-accent:hover {
+    background-color: #e6d200;
   }
 }
 
