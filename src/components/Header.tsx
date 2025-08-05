@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
 
-/**
- * Componente de encabezado con navegación responsiva
- */
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -13,11 +10,11 @@ const Header: React.FC = () => {
   };
 
   const navItems = [
-    { name: 'Inicio', path: '/' },
-    { name: 'Servicios', path: '#servicios' },
-    { name: 'Portafolio', path: '#portafolio' },
-    { name: 'Precios', path: '#precios' },
-    { name: 'Contacto', path: '#contacto' },
+    { name: "Inicio", path: "/" },
+    { name: "Servicios", path: "#servicios" },
+    { name: "Portafolio", path: "#portafolio" },
+    { name: "Precios", path: "#precios" },
+    { name: "Contacto", path: "#contacto" },
   ];
 
   return (
@@ -26,9 +23,9 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
-              src="/assets/images/logo.png" 
-              alt="Webix Logo" 
+            <img
+              src="/assets/images/logo.png"
+              alt="Webix Logo"
               className="h-12 w-auto"
             />
             <span className="ml-2 text-xl font-bold text-primary">Webix</span>
@@ -46,9 +43,9 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <a 
-              href="https://wa.me/1234567890" 
-              target="_blank" 
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
               rel="noopener noreferrer"
               className="ml-4 bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors duration-300 flex items-center"
             >
@@ -58,7 +55,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Botón de menú móvil */}
-          <button 
+          <button
             className="md:hidden text-gray-700 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -82,12 +79,12 @@ const Header: React.FC = () => {
                   className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.item}
+                  {item.name}
                 </Link>
               ))}
-              <a 
-                href="https://wa.me/1234567890" 
-                target="_blank" 
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors duration-300 flex items-center justify-center"
               >
