@@ -320,21 +320,7 @@ const ContactPage: React.FC = () => {
                 <div className="mt-12">
                   <h3 className="text-lg font-medium text-gray-900 mb-4">Síguenos</h3>
                   <div className="flex space-x-4">
-                    {[
-                      { name: 'Facebook', url: 'https://facebook.com/webix', icon: 'FaFacebook' },
-                      { name: 'Instagram', url: 'https://instagram.com/webix', icon: 'FaInstagram' },
-                      { name: 'LinkedIn', url: 'https://linkedin.com/company/webix', icon: 'FaLinkedin' },
-                      { name: 'Twitter', url: 'https://twitter.com/webix', icon: 'FaTwitter' }
-                    ].map((social, _index) => (
-                      <a 
-                        key={social.name}
-                        href={social.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300"
-                        aria-label={social.name}
-                      >
-                        {[
+                  {[
   { name: 'Facebook', url: 'https://facebook.com/webix', icon: <FaFacebook className="w-5 h-5" /> },
   { name: 'Instagram', url: 'https://instagram.com/webix', icon: <FaInstagram className="w-5 h-5" /> },
   { name: 'LinkedIn', url: 'https://linkedin.com/company/webix', icon: <FaLinkedin className="w-5 h-5" /> },
@@ -351,8 +337,6 @@ const ContactPage: React.FC = () => {
     {social.icon}
   </a>
 ))}
-                      </a>
-                    ))}
                   </div>
                 </div>
               </div>
