@@ -1,0 +1,41 @@
+# Allow all web crawlers to access all parts of the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://webix.com/sitemap.xml
+
+# Disallow access to admin and API routes
+Disallow: /admin/
+Disallow: /api/
+
+# Disallow access to development and build files
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
+Disallow: /src/
+Disallow: /node_modules/
+
+# Crawl-delay: 10
+
+# Allow all image files to be crawled (for image search)
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Social media crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Block specific crawlers if needed
+# User-agent: BadBot
+# Disallow: /
