@@ -11,7 +11,10 @@
   }
 
   body {
-    @apply text-gray-900 antialiased;
+    background-color: theme('colors.white');
+    color: theme('colors.gray.900');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
