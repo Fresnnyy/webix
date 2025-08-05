@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane, FaWhatsapp } from 'react-icons/fa';
 
 /**
  * Página de Contacto con formulario y detalles de contacto
@@ -334,7 +334,23 @@ const ContactPage: React.FC = () => {
                         className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300"
                         aria-label={social.name}
                       >
-                        {React.createElement(require('react-icons/fa')[social.icon], { className: 'w-5 h-5' })}
+                        {[
+  { name: 'Facebook', url: 'https://facebook.com/webix', icon: <FaFacebook className="w-5 h-5" /> },
+  { name: 'Instagram', url: 'https://instagram.com/webix', icon: <FaInstagram className="w-5 h-5" /> },
+  { name: 'LinkedIn', url: 'https://linkedin.com/company/webix', icon: <FaLinkedin className="w-5 h-5" /> },
+  { name: 'Twitter', url: 'https://twitter.com/webix', icon: <FaTwitter className="w-5 h-5" /> }
+].map((social) => (
+  <a 
+    key={social.name}
+    href={social.url} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300"
+    aria-label={social.name}
+  >
+    {social.icon}
+  </a>
+))}
                       </a>
                     ))}
                   </div>
